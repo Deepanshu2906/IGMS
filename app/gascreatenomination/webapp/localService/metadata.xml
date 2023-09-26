@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="GasManagementService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Contracts" EntityType="GasManagementService.Contracts">
+                    <NavigationPropertyBinding Path="pastNomination" Target="pastNomination"/>
+                </EntitySet>
+                <EntitySet Name="pastNomination" EntityType="GasManagementService.pastNomination">
+                    <NavigationPropertyBinding Path="contractId" Target="Contracts"/>
+                </EntitySet>
+            </EntityContainer>
+            <EntityType Name="Contracts">
+                <Key>
+                    <PropertyRef Name="contractId"/>
+                </Key>
+                <Property Name="contractId" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="companyName" Type="Edm.String"/>
+                <Property Name="description" Type="Edm.String"/>
+                <Property Name="maxQty" Type="Edm.Int32"/>
+                <Property Name="minQty" Type="Edm.Int32"/>
+                <Property Name="contractType" Type="Edm.String"/>
+                <Property Name="contractNo" Type="Edm.Int32"/>
+                <Property Name="date" Type="Edm.Date"/>
+                <Property Name="time" Type="Edm.TimeOfDay"/>
+                <Property Name="dnq" Type="Edm.Int32"/>
+                <Property Name="uom" Type="Edm.String"/>
+                <Property Name="event" Type="Edm.String"/>
+                <NavigationProperty Name="pastNomination" Type="Collection(GasManagementService.pastNomination)" Partner="contractId"/>
+            </EntityType>
+            <EntityType Name="pastNomination">
+                <Key>
+                    <PropertyRef Name="id"/>
+                    <PropertyRef Name="contractId_contractId"/>
+                </Key>
+                <Property Name="id" Type="Edm.Guid" Nullable="false"/>
+                <NavigationProperty Name="contractId" Type="GasManagementService.Contracts" Partner="pastNomination">
+                    <ReferentialConstraint Property="contractId_contractId" ReferencedProperty="contractId"/>
+                </NavigationProperty>
+                <Property Name="contractId_contractId" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="gasDay" Type="Edm.Date"/>
+                <Property Name="approvedDNQ" Type="Edm.Int32"/>
+                <Property Name="approvedUoM" Type="Edm.String"/>
+                <Property Name="remarks" Type="Edm.String"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

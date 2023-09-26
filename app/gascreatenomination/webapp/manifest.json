@@ -1,0 +1,153 @@
+{
+  "_version": "1.49.0",
+  "sap.app": {
+    "id": "gascreatenomination",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.11.0",
+      "toolsId": "ca2f1723-b34d-40b6-81b7-ae0347bda0bd"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/gas-management/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.118.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "gascreatenomination.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "gascreatenomination.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "first",
+          "pattern": "",
+          "target": [
+            "TgView1","TgView2"
+          ]
+        },
+        {
+          "name": "second",
+          "pattern": "Contracts/{contractId}",
+          "target": [
+            "TgView1","modi"
+          ]
+        }
+      ],
+      "targets": {
+        "TgView1": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": true,
+          "viewId": "View1",
+          "viewName": "View1",
+          "controlAggregation": "masterPages",
+          "viewLevel": 1
+        },
+        "TgView2": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": true,
+          "viewId": "Empty",
+          "viewName": "Empty",
+          "controlAggregation": "detailPages",
+          "viewLevel": 2
+        },
+        "modi": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View2",
+          "viewName": "View2",
+          "controlAggregation": "detailPages",
+          "viewLevel": 3
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "gascreatenomination.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Ingenxgasmanagement",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7.2.1",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1.2.1",
+    "@sap/ux-specification": "^1.108.14"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-gascreatenomination": "cds watch --open gascreatenomination/webapp/index.html?sap-ui-xx-viewCache=false"
+  }
+}

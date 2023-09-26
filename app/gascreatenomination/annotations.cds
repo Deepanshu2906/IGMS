@@ -1,0 +1,1 @@
+using GasManagementService as service from '../../srv/service';

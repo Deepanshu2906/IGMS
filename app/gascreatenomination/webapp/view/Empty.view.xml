@@ -1,0 +1,9 @@
+<mvc:View controllerName="gascreatenomination.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="Detail Page" >
+        
+          
+
+    </Page>
+</mvc:View>

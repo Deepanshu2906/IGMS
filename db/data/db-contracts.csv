@@ -1,0 +1,5 @@
+contractId,companyName,description,maxQty,minQty,contractType,contractNo,date,time,dnq,uom,event
+2333,ORIL Private Limited,An MNC OIL SUPPELIER,1200,400,Permanent,0934,2023-10-12,23:30:22,34,MBT,simple
+2334,ORL Private Limited,An MNC OIL SUPPELIER,1200,500,Short-term,0935,2023-10-12,23:30:22,30,MBT,simple
+2335,MGRB Private Limited,An MNC OIL SUPPELIER,1200,600,Permanent,0936,2023-10-12,23:30:22,35,MBT,dsm
+2336,GRB Private Limited,An MNC OIL SUPPELIER,1200,600,Temporary,0937,2023-10-12,23:30:22,37,MBT,Dksdn

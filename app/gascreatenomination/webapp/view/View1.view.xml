@@ -1,0 +1,63 @@
+<mvc:View xmlns:mdc="sap.ui.mdc" controllerName="gascreatenomination.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" titleAlignment="Center" >
+             <!-- <headerContent>
+                <Button id="_IDGenButton1" 
+                icon="sap-icon://action" 
+                 press="onNext"></Button>
+                </headerContent> -->
+   <content>
+    
+    <List id="idLST" items="{
+        path:'/Contracts',
+        sorter:{
+            path:'description'
+        }
+    }"
+
+    mode="SingleSelectMaster"
+
+    selectionChange="onContractSelect"
+    >
+    
+    <headerToolbar>
+        <Toolbar id="_IDGenToolbar1" >
+                <SearchField id="_IDGenSearchField1" search="onSearch" liveChange="onSearch" placeholder="Contract Number or Description"></SearchField>
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" ></ToolbarSpacer>
+                
+            </Toolbar>
+        </headerToolbar>
+        <items >
+            <ObjectListItem 
+            id="_IDGenObjectListItem1"   
+            title="" 
+            intro="{contractId}" 
+            number="" 
+            numberUnit="{uom}"
+            >
+            
+                <attributes>
+                    <ObjectAttribute id="_IDGenObjectAttribute2" text="{companyName}" title="Company"></ObjectAttribute>
+                  
+                </attributes>
+                <firstStatus>
+                  <ObjectStatus id="_IDGenObjectStatus1" text="Available" state="Warning"
+                  ></ObjectStatus>
+                </firstStatus>
+              </ObjectListItem>
+            
+        </items>
+        
+    </List>
+
+   </content>
+  
+ 
+    <!-- <Toolbar >
+    <ToolbarSpacer ></ToolbarSpacer>
+     <Button text="Create Re-Nomination" class=""></Button>
+    </Toolbar> -->
+   
+    </Page>
+</mvc:View>

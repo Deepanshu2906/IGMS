@@ -1,0 +1,43 @@
+<mvc:View controllerName="gascreatenomination.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout"><ObjectHeader xmlns="sap.m" title="Create Gas Re-Nomination" id="header4" class="header4" icon="data:image/png;base64,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" backgroundDesign="Solid" responsive="true">
+
+    </ObjectHeader>
+    <l:Splitter id="_IDGenSplitter1" height="100vh" width="100%">
+    
+        <SplitApp id="app"/>
+
+        <Table id="_IDGenTable1">
+            <layoutData>
+                <l:SplitterLayoutData id="_IDGenSplitterLayoutData1" size="300px" resizable="false"/>
+            </layoutData>
+            <headerToolbar>
+                <OverflowToolbar id="otbSubheader">
+                    <Title id="_IDGenTitle1" text="Past Nomination" level="H2"/>
+                    <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                </OverflowToolbar>
+            </headerToolbar>
+            <columns>
+                <Column id="_IDGenColumn1">
+                    <Text id="_IDGenText1" text="Gas Day Date"/>
+                </Column>
+                <Column id="_IDGenColumn2">
+                    <Text id="_IDGenText2" text="Approved DNQ"/>
+                </Column>
+                <Column id="_IDGenColumn3">
+                    <Text id="_IDGenText44" text="Approved UoM"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="_IDGenColumnListItem1">
+                    <cells>
+                        <Text id="_IDGenText3" text="25-09-2023"/>
+                        <Text id="_IDGenText4" text="1200.00"/>
+                        <Text id="_IDGenText5" text="MBT"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+        
+    </l:Splitter>
+  
+</mvc:View>

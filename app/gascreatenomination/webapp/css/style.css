@@ -1,0 +1,42 @@
+/* Enter your custom styles here */
+/* Enter your custom styles here */
+/* .formClass {
+    background-color: grey;
+    color: white;
+    
+} */
+/* .sapUiSimpleForm, .sapUiForm>.sapUiFormResGrid {
+    background-color: grey;
+    color: white;
+} */
+/* #header-shellArea,.sapUshellShellHeader, .sapContrastPlus {
+    background-color: rgb(114, 114, 161);
+    color: white !important;
+} */
+.sapMOHR.sapContrastPlus.sapMOHRBgSolid{
+    background-color: black;
+    color: white !important;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+.sapMOHRTitleTextWrappable {
+    white-space: normal;
+    color: white;
+    font-size: 20px;
+    padding-left: 24px;
+  }
+  .sapMOHRTitleDiv {
+    
+    margin-top: 16px;
+  }
+
+.sapMOHRIcon .sapMImg{
+    max-width: 5rem;
+}
+span.sapMBtnInner.sapMBtnEmphasized {
+    
+    margin-left: 320px;
+    margin-top: 20px;
+  }

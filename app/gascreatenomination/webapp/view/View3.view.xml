@@ -1,0 +1,60 @@
+<mvc:View controllerName="gascreatenomination.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    width="50%" >
+    <Page id="page" title="{i18n>title}" >
+             <!-- <headerContent>
+                <Button id="_IDGenButton1" 
+                icon="sap-icon://action" 
+                 press="onNext"></Button>
+                </headerContent> -->
+   <content>
+    
+    <List id="idLST" items="{
+        path:'/fruits',
+        sorter:{
+            path:'name'
+        }
+    }"
+
+    mode="SingleSelectMaster"
+    delete="onDelete"
+    selectionChange="onFruitSelect"
+    >
+    
+    <headerToolbar>
+        <Toolbar id="_IDGenToolbar1" >
+                <SearchField id="_IDGenSearchField1" search="onSearch" liveChange="onSearch"></SearchField>
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" ></ToolbarSpacer>
+                <Button id="_IDGenButton2" icon="sap-icon://delete" press="onDeleteItems"></Button>
+            </Toolbar>
+        </headerToolbar>
+        <items >
+            <ObjectListItem 
+            id="_IDGenObjectListItem1"   
+            title="{name}" 
+            intro="{taste}" 
+            icon="{image}" 
+            number="{price} " 
+            numberUnit="{curr}"
+            >
+            
+                <attributes>
+                    <ObjectAttribute id="_IDGenObjectAttribute2" text="{healthBenefit}" title="Benefit"></ObjectAttribute>
+                  <ObjectAttribute id="_IDGenObjectAttribute3" text="{season}" title="season"></ObjectAttribute>
+                  <ObjectAttribute id="_IDGenObjectAttribute4" text="{color}" title="color"></ObjectAttribute>
+                  <ObjectAttribute id="_IDGenObjectAttribute1" text="{size}" title="size"></ObjectAttribute>
+                </attributes>
+                <firstStatus>
+                  <ObjectStatus id="_IDGenObjectStatus1" text="Available" state="Success"
+                  ></ObjectStatus>
+                </firstStatus>
+              </ObjectListItem>
+            
+        </items>
+        
+    </List>
+
+   </content>
+    </Page>
+</mvc:View>
